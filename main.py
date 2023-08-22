@@ -4,8 +4,8 @@ from flask import Flask, render_template, request
 from googleapiclient import discovery
 
 app = Flask(__name__)
-API_KEY = 'AIzaSyBGrHf8lnyrgG5sfIxu64dfBTpOmQvbjWI'
-disc_url = "https://commentanalyzer.googleapis.com/$discovery/rest?version=v1alpha1"
+API_KEY = ''
+disc_url = ""
 client = discovery.build(
       "commentanalyzer",
       "v1alpha1",
