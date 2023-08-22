@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><title>Toxicity detector</title><body>
+<style>
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+  background-color: #DDDDDD;
+}
+</style>
+<h2>Measure toxicity in text</h2>
+
+{% if trans['text'] %}
+    <h4>Previous text toxicity</h4>
+    <li><b>Source comment</b>:   {{ orig['text'] }}  (<i>{{ orig['lc'][0] }}</i>)</li>
+    <li><b>Toxicity</b>: {{ trans['text'] }} (<i>{{ trans['lc'][0] }}</i>)</li>
+{% endif %}
+
+<h4>Enter comment to measure Toxicity:</h4>
+<form method="POST"><input name="text"><input type="submit"></form>
+</body></html>
